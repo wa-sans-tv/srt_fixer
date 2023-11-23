@@ -91,3 +91,4 @@ document.querySelector('#convert').addEventListener('click', function () {
     console.log('No file selected');
   }
 });
+
