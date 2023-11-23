@@ -7,6 +7,9 @@ function removeLeadingSpacesAndFixTiming(srtData) {
   for (var i = 0; i < lines.length; i++) {
     var line = lines[i];
 
+    // 마침표 '.' 제거
+    line = line.replace(/\./g, '');
+
     if (line.includes('-->')) {
       var timeStrings = line.split('-->');
       var startTimeString = timeStrings[0].trim();
@@ -88,4 +91,3 @@ document.querySelector('#convert').addEventListener('click', function () {
     console.log('No file selected');
   }
 });
-
